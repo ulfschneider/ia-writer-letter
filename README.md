@@ -1,4 +1,4 @@
-Letter is a [iA Writer template](https://ia.net/downloads#templates) to write letters with correctly positioned address fields.
+*Letter* is a [iA Writer template](https://ia.net/downloads#templates) to write letters with correctly positioned address fields.
 
 ## A sample letter
 
