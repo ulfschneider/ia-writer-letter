@@ -23,8 +23,8 @@ html {
 }
 
 body {
-    margin-left: 1in;
-    margin-right: 1in;
+    margin-left: 2.5cm;
+    margin-right: 2.5cm;
     margin-top: 0;
     overflow: hidden;
 }
@@ -49,7 +49,7 @@ h5+h6 {
 
 body.title h1 {
     font-size: larger;
-    margin-top: 1in;
+    margin-top: 2.5cm;
 }
 
 body.title h2 {
@@ -160,9 +160,9 @@ address {
 
 address.receiver {
     display: inline-block;
-    margin-top: 1in;
-    margin-bottom: 1in;
-    max-width: 3in;
+    margin-top: 2.5cm;
+    margin-bottom: 2.5cm;
+    max-width: 7.5cm;
 }
 
 dl {
