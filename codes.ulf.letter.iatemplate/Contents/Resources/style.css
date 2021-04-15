@@ -1,0 +1,400 @@
+:root {
+    --line-height: 1.62;
+    --vertical-rhythm: 1rem;
+    --horizontal-rhythm: calc(var(--line-height) * 1rem);
+    --space-1: calc(var(--vertical-rhythm) * var(--line-height));
+    --space-2: calc(var(--space-1) * var(--line-height));
+    --space: 1rem;
+    --space-d1: calc(var(--vertical-rhythm) * .5);
+    --space-d2: calc(var(--space-d1) * .5);
+    --list-item-type: "–";
+    --ol-counter-delimiter: "-";
+    --ol-counter-type: decimal;
+    --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0";
+}
+
+* {
+    font-family: 'iA Writer Quattro', sans-serif;
+    line-height: var(--line-height);
+}
+
+html {
+    font-size: 11pt;
+}
+
+body {
+    margin-left: 1in;
+    margin-right: 1in;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    margin: var(--space-2) 0 var(--vertical-rhythm) 0;
+}
+
+h1+h2,
+h2+h3,
+h3+h4,
+h4+h5,
+h5+h6 {
+    margin-top: var(--vertical-rhythm);
+}
+
+body.title h1 {
+    font-size: larger;
+    margin-top: 1in;
+}
+
+body.title h2 {
+    font-weight: normal;
+}
+
+table,
+figure,
+blockquote {
+    margin: var(--space-2) 0;
+}
+
+p {
+    margin: var(--vertical-rhythm) 0;
+}
+
+img {
+    max-width: 100%;
+    margin: 0;
+}
+
+img+img {
+    margin-top: var(--vertical-rhythm);
+}
+
+blockquote {
+    font-style: italic;
+}
+
+figcaption,
+blockquote footer,
+blockquote header {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    font-style: normal;
+    font-size: small;
+}
+
+blockquote header::after,
+blockquote footer::before {
+    content: "—";
+}
+
+table caption,
+figcaption {
+    margin-top: 0;
+    margin-bottom: var(--vertical-rhythm);
+}
+
+figure>*+figcaption {
+    margin-top: var(--vertical-rhythm);
+    margin-bottom: 0;
+}
+
+hr {
+    border: 0;
+    text-align: center;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+hr::after {
+    content: "·\0000a0\0000a0\0000a0·\0000a0\0000a0\0000a0·";
+    white-space: pre;
+}
+
+pre,
+code {
+    font-family: "iA Writer Mono", monospace;
+    overflow: hidden;
+    white-space: pre-wrap;
+    background: #eee;
+}
+
+.header {
+    text-align: left;
+}
+
+.footer {
+    text-align: right;
+}
+
+.header *,
+.footer * {
+    font-style: normal;
+    font-size: small;
+}
+
+.sender-meta {
+    float: right;
+    margin-left: 1in;
+    font-size: small;
+    max-width: 2.5in;
+}
+
+.sender-meta * {
+    display: block;
+}
+
+.sender-meta *+* {
+    margin-top: var(--vertical-rhythm);
+}
+
+address {
+    font-style: normal;
+}
+
+address.receiver {
+    display: inline-block;
+    margin-top: 1in;
+    margin-bottom: 1in;
+    max-width: 3in;
+}
+
+dl {
+    margin-top: var(--vertical-rhythm);
+    margin-bottom: var(--vertical-rhythm);
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+dd {
+    margin-left: var(--horizontal-rhythm);
+}
+
+dd+dt {
+    margin-top: var(--vertical-rhythm);
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin-left: var(--horizontal-rhythm);
+    margin-right: 0;
+    margin-top: var(--vertical-rhythm);
+    margin-bottom: var(--vertical-rhythm);
+}
+
+ol ol,
+ol ul,
+ul ul,
+ul ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li p {
+    display: inline;
+}
+
+li ol {
+    counter-reset: ol-counter;
+}
+
+ol li {
+    counter-increment: ol-counter;
+}
+
+ol li::before {
+    content: var(--ol-counter);
+    min-width: var(--horizontal-rhythm);
+    margin-left: calc(var(--horizontal-rhythm) * -1);
+    text-align: left;
+    display: inline-block;
+    font-family: var(--meta-font-family);
+    font-weight: bold;
+}
+
+ul li::before {
+    content: var(--list-item-type);
+    margin-left: calc(var(--horizontal-rhythm) * -1);
+    min-width: var(--horizontal-rhythm);
+    text-align: left;
+    display: inline-block;
+}
+
+ol ol li::before,
+ol ul li::before,
+ul ul li::before,
+ul ol li::before {
+    min-width: var(--horizontal-rhythm);
+    padding-left: 0;
+}
+
+table {
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+    margin-top: var(--vertical-rhythm);
+    margin-bottom: var(--vertical-rhythm);
+    text-align: left;
+    font-size: small;
+}
+
+th {
+    vertical-align: top;
+}
+
+thead>tr>th {
+    vertical-align: bottom;
+}
+
+table table {
+    margin: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+}
+
+table caption {
+    margin: 0;
+    text-align: left;
+    font-style: normal;
+}
+
+th,
+td {
+    padding: var(--space-d2) var(--space-d1);
+}
+
+th:first-child,
+td:first-child,
+th+td {
+    padding-left: 0;
+}
+
+*+td,
+*+th {
+    padding-left: var(--space-d2);
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+}
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        color: #000 !important;
+        /* black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+
+
+/* footnotes */
+
+.footnote {
+    text-decoration: none;
+}
+
+.footnote-ref a {
+    text-decoration: none;
+}
+
+.reversefootnote {
+    display: none;
+}
+
+.footnotes {
+    counter-reset: footnote-counter;
+}
+
+.footnotes li {
+    counter-increment: footnote-counter;
+}
+
+.footnotes li::before {
+    content: counter(footnote-counter);
+    font-weight: normal;
+    vertical-align: super;
+}
+
+a.citation {
+    text-decoration: none;
+}
+
+
+/* Task Lists*/
+
+ul li.task-list-item,
+ol li.task-list-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.task-list-item::before {
+    content: "";
+    display: '';
+}
+
+.task-list-item-checkbox {
+    -webkit-appearance: none;
+    font-size: inherit;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+.task-list-item-checkbox::before {
+    content: "☐";
+    font-size: x-large;
+    line-height: 1;
+    margin-left: calc(var(--horizontal-rhythm) * -1);
+    min-width: var(--horizontal-rhythm);
+}
+
+.task-list-item-checkbox:checked::before {
+    content: "☑";
+    font-size: x-large;
+    line-height: 1;
+    margin-left: calc(var(--horizontal-rhythm) * -1);
+    min-width: var(--horizontal-rhythm);
+}
+
+
+/* night mode */
+
+.night-mode * {
+    color: #dedede;
+    border-color: #dedede;
+}
+
+.night-mode pre,
+.night-mode code {
+    background: #444;
+}
+
+.night-mode {
+    color: #dedede;
+    background: #101010;
+}
