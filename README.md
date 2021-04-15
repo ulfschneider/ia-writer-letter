@@ -36,7 +36,7 @@ Indicate the sender, receiver, and date of writing with the following syntax in 
 
 ## How to install 
 
-1. Download the template.
+1. Download the [template](https://github.com/ulfschneider/ia-letter/archive/refs/heads/master.zip).
 2. Double-click on the *bundle* named <code>letter.iatemplate</code>. The bundle will then be installed inside of iA Writer. Please refer to [iA-Writer-Templates](https://github.com/iainc/iA-Writer-Templates) for further information.
 
 ## How to use
