@@ -43,6 +43,6 @@ Indicate the sender, receiver, and date of writing with the following syntax in 
 ## How to use
 
 - In iA Writer, click the **play** button at the top right of the editor to open the preview pane. 
-- At the bottom of the preview pane select the template use. Select **Letter**.
+- At the bottom of the preview pane select the template to use. Select **Letter**.
 - The selected template will be used for the printing of the text.
 
