@@ -23,10 +23,15 @@ html {
 }
 
 body {
-    margin-left: 2.5cm;
-    margin-right: 2.5cm;
-    margin-top: 0;
+    margin: 0 1rem;
+    margin-left: 1rem;
     overflow: hidden;
+}
+
+@media print {
+    body {
+        margin: 0 2.5cm;
+    }
 }
 
 h1,
