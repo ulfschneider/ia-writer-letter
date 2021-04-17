@@ -1,6 +1,6 @@
 <figure>
 <img src="/img/ia-letter-editor-print-aside.jpg">
-<figcaption><em>Letter</em> is a <a href="https://ia.net/downloads#templates">iA Writer template</a> to write letters with correctly positioned address fields.</figcaption>
+<figcaption><em>Letter</em> is a <a href="https://ia.net/downloads#templates">iA Writer template</a> to create letters with correctly positioned address fields.</figcaption>
 </figure>
 
 ## Install
