@@ -13,13 +13,13 @@
 ## A sample letter
 
 <figure>
-<figcaption>A markdown-formatted letter with indication for the <em>sender-address,</em> the <em>receiver-address,</em> and the <em>date</em> of writing. The sample text is taken from <a href="https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/sample_letters.html">Purdue Online Writing Lab<a/>.</figcaption>
 <img src="/img/ia-letter-editor.jpg">
+<figcaption>A markdown-formatted letter with indication for the <em>sender-address,</em> the <em>receiver-address,</em> and the <em>date</em> of writing. The sample text is taken from <a href="https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/sample_letters.html">Purdue Online Writing Lab<a/>.</figcaption>
 </figure>
 
 <figure>
-<figcaption>The <em>Letter</em> template will set the text with the iA Writer Quattro typeface. It´s assumed letters are printed on DIN A4 paper or anything of roughly the same size. The sender, receiver, and the date of writing will be positioned correctly when printing the text with the <em>Letter</em> template.</figcaption>
 <img src="/img/ia-letter-print.jpg">
+<figcaption>The <em>Letter</em> template will set the text with the iA Writer Quattro typeface. It´s assumed letters are printed on DIN A4 paper or anything of roughly the same size. The sender, receiver, and the date of writing will be positioned correctly when printing the text with the <em>Letter</em> template.</figcaption>
 </figure>
 
 
