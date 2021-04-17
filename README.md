@@ -49,3 +49,6 @@ Indicate the sender, receiver, and date of writing with the following syntax in 
 - At the bottom of the preview pane select the template to use. Select **Letter**.
 - The selected template will be used for the printing of the text.
 
+## Issues
+
+Please file issues on the [GitHub page](https://github.com/ulfschneider/ia-letter/issues) of *Letter.*
