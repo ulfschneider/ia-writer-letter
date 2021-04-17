@@ -27,7 +27,7 @@ The <em>Letter</em> template will set the text with the iA Writer Quattro typefa
 
 ## The editor
 
-Indicate the sender, receiver, and date of writing with the following syntax in the iA Writer editor while working on your text. Please mind the *empty lines before and after each data entry.*
+Indicate the sender, receiver, and date of writing with the following syntax in the iA Writer editor. Please mind the *empty lines before and after each data entry.*
 
 ~~~markdown
 @sender
