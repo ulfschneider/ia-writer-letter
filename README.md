@@ -1,6 +1,9 @@
-*Letter* is a [iA Writer template](https://ia.net/downloads#templates) to write letters with correctly positioned address fields.
+<figure>
+<img src="/img/ia-letter-editor-print-aside.jpg">
+<figcaption><em>Letter</em> is a <a href="https://ia.net/downloads#templates">iA Writer template</a> to write letters with correctly positioned address fields.</figcaption>
+</figure>
 
-## How to install 
+## Install
 
 1. [Download the template](https://github.com/ulfschneider/ia-letter/archive/refs/heads/master.zip).
 2. Open the folder named <code>ia-letter-master</code>.
@@ -40,7 +43,7 @@ Indicate the sender, receiver, and date of writing with the following syntax in 
 ~~~
 
 
-## How to use
+## Use
 
 - In iA Writer, click the **play** button at the top right of the editor to open the preview pane. 
 - At the bottom of the preview pane select the template to use. Select **Letter**.
