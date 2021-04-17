@@ -13,7 +13,7 @@
 ## A sample letter
 
 <figure>
-<figcaption>A markdown-formatted letter with indication for the <em>sender-address,</em> the <em>receiver-address,</em> and the <em>date</em> of writing.</figcaption>
+<figcaption>A markdown-formatted letter with indication for the <em>sender-address,</em> the <em>receiver-address,</em> and the <em>date</em> of writing. The sample text is taken from <a href="https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/sample_letters.html">Purdue Online Writing Lab<a/>.</figcaption>
 <img src="/img/ia-letter-editor.jpg">
 </figure>
 
