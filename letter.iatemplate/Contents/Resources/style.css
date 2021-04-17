@@ -19,18 +19,28 @@
 }
 
 html {
-    font-size: 11pt;
+    font-size: 17px;
 }
 
 body {
     margin: 1rem;
-    margin-left: 1rem;
+    max-width: 65ch;
     overflow: hidden;
 }
 
 @media print {
     body {
-        margin: 0 2.5cm;
+        margin: 0 3cm;
+        font-size: 10pt;
+        font-weight: 400;
+    }
+    *,
+    *:before,
+    *:after {
+        color: #000 !important;
+        /* black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
 }
 
@@ -40,7 +50,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 1rem;
+    font-size: inherit;
     margin: var(--space-2) 0 var(--vertical-rhythm) 0;
 }
 
@@ -91,7 +101,7 @@ blockquote header {
     margin-bottom: 0;
     text-align: left;
     font-style: normal;
-    font-size: small;
+    font-size: smaller;
 }
 
 blockquote header::after,
@@ -141,14 +151,21 @@ code {
 .header *,
 .footer * {
     font-style: normal;
-    font-size: small;
+    font-size: smaller;
 }
 
 .sender-meta {
     float: right;
-    margin-left: 1in;
-    font-size: small;
-    max-width: 2.5in;
+    margin-left: 2.5cm;
+    max-width: 6cm;
+}
+
+@media screen and (max-width: 600px) {
+    .sender-meta {
+        float: none;
+        margin-left: 0;
+        max-width: unset;
+    }
 }
 
 .sender-meta * {
@@ -253,7 +270,7 @@ table {
     margin-top: var(--vertical-rhythm);
     margin-bottom: var(--vertical-rhythm);
     text-align: left;
-    font-size: small;
+    font-size: smaller;
 }
 
 th {
@@ -266,6 +283,7 @@ thead>tr>th {
 
 table table {
     margin: 0;
+    font-size: inherit;
 }
 
 td {
@@ -301,17 +319,6 @@ th+td {
 th:last-child,
 td:last-child {
     padding-right: 0;
-}
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        color: #000 !important;
-        /* black prints faster */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
 }
 
 
