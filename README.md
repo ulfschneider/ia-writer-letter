@@ -12,13 +12,13 @@
 
 ## A sample letter
 
-See below a markdown-formatted letter in the iA Writer editor, with indication for the <em>sender-address,</em> the <em>receiver-address,</em> and the <em>date</em> of writing. The sample text is taken from <a href="https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/sample_letters.html">Purdue Online Writing Lab</a>.
+See below a markdown-formatted letter in the iA Writer editor, with indication for the *sender-address,* the *receiver-address,* and the *date* of writing. The sample text is taken from <a href="https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/sample_letters.html">Purdue Online Writing Lab</a>.
 
 <figure>
 <img src="/img/ia-letter-editor.jpg" alt="A markdown-formatted letter in the iA Writer editor, with indication for the sender-address, the receiver-address, and the date of writing.">
 </figure>
 
-The <em>Letter</em> template will set the text with the iA Writer Quattro typeface. It´s assumed letters are printed on DIN A4 paper or anything of roughly the same size. The sender, receiver, and the date of writing will be positioned correctly when printing the text with the <em>Letter</em> template. See below how the above text is formatted by the <em>Letter</em> template.
+The *Letter* template will render the text with the *iA Writer Quattro* typeface. It´s assumed letters are printed on DIN A4 paper or anything of roughly the same size. The sender, receiver, and the date of writing will be positioned correctly when printing the text with the *Letter* template. See below how the above text is formatted by the *Letter* template.
 
 <figure>
 <img src="/img/ia-letter-print.jpg" style="border:1px solid gray" alt="A formatted letter.">
