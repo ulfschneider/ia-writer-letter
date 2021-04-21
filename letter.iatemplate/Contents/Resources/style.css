@@ -11,6 +11,9 @@
     --ol-counter-delimiter: "-";
     --ol-counter-type: decimal;
     --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0";
+    --text-color: black;
+    --text-background: white;
+    --mark-background: yellow;
 }
 
 * {
@@ -37,7 +40,7 @@ body {
     *,
     *:before,
     *:after {
-        color: #000 !important;
+        color: var(--text-color) !important;
         /* black prints faster */
         box-shadow: none !important;
         text-shadow: none !important;
@@ -319,6 +322,23 @@ th+td {
 th:last-child,
 td:last-child {
     padding-right: 0;
+}
+
+mark,
+.mark {
+    background: var(--mark-background);
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+kbd,
+.kbd {
+    border-radius: 2px;
+    border: 1px solid var(--text-color);
+    padding: 0 0.2em;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 1em;
 }
 
 
