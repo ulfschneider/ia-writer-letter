@@ -12,7 +12,7 @@
 
 ## A sample letter
 
-See below a markdown-formatted letter in the iA Writer editor, with indication for the *sender-address,* the *receiver-address,* and the *date* of writing. The sample text is taken from <a href="https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/sample_letters.html">Purdue Online Writing Lab</a>.
+See below a markdown-formatted letter in the iA Writer editor, with indication for the *sender-address,* the *receiver-address,* and the *date* of writing. The sample text is taken from [Purdue Online Writing Lab](https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/sample_letters.html).
 
 <figure>
 <img src="/img/ia-letter-editor.jpg" alt="A markdown-formatted letter in the iA Writer editor, with indication for the sender-address, the receiver-address, and the date of writing.">
