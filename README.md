@@ -30,12 +30,12 @@ The *Letter* template will render the text with the *iA Writer Quattro* typeface
 Indicate the sender, recipient, and date of writing with the following syntax in the iA Writer editor. Please mind the *empty lines before and after each data entry.*
 
 ~~~markdown
-@from
+@sender
 :Lucy Letter
 :27 Writing Avenue 
 :12345 Garden Town
 
-@to
+@receiver
 :Ernie English
 :78 Reading Lane
 :34567 Read City
@@ -44,8 +44,8 @@ Indicate the sender, recipient, and date of writing with the following syntax in
 :April 15, 2021
 ~~~
 
-- Instead of the `@from` keyword, `@sender` can be used as well.
-- Instead of the `@to` keyword, `@recipient` and `@receiver` can be used alternatively.
+- Instead of the `@sender` keyword, `@from` can be used as well.
+- Instead of the `@receiver` keyword, `@recipient` and `@to` can be used alternatively.
 
 
 ## Use
