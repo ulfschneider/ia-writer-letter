@@ -1,6 +1,10 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
-    //Have the addressMap to pre-configure addresses and make them available via a short access key.
+    const FROM_KEYS = ['@sender', '@from'];
+    const DATE_KEYS = ['@date'];
+    const TO_KEYS = ['@receiver', '@recipient', '@to'];
+
+    //Future Idea: Have the addressMap to pre-configure addresses and make them available via a short access key.
     //A semicolon is treated as a new line
     //Example:
     //const addressMap = new Map([
@@ -15,15 +19,15 @@ window.addEventListener('load', function() {
     //@receiver
     //:ee
     //
-    const addressMap = new Map();
+    let addressMap = new Map();
 
-    const loadAddress = function(s) {
+    const loadAddress = function (s) {
         let address = addressMap.get(s.trim());
         return address ? address : s;
     }
 
 
-    const formatAddress = function(s) {
+    const formatAddress = function (s) {
         let parts = s.split(/;|\n|<br>/);
         let formatted = '';
 
@@ -36,33 +40,27 @@ window.addEventListener('load', function() {
             let trimmedPart = part.trim();
 
             if (trimmedPart) {
-                formatted += trimmedPart;
-                if (i < parts.length - 1) {
-                    formatted += '<br>';
-                }
+                formatted += '<div>' + trimmedPart + '</div>';                
             }
         });
 
         return formatted;
     }
 
-    const extractDefinitionListContent = function(key) {
+    const extractDefinitionListContent = function (keys) {
         let dl = document.querySelectorAll('dl');
         let content = '';
         let extract = false;
         for (let l of dl) {
             let elements = l.querySelectorAll('*');
             for (element of elements) {
-                if (element.tagName == 'DT' && element.innerHTML == key) {
+                if (element.tagName == 'DT' && keys.includes(element.innerHTML)) {
                     extract = true;
                     element.remove();
                 } else if (element.tagName == 'DT') {
                     extract = false;
                 } else if (element.tagName == 'DD' && extract) {
-                    if (content) {
-                        content += '<br>';
-                    }
-                    content += element.innerHTML;
+                    content += '<div>' + element.innerHTML + '</div>';
                     element.remove();
                 }
             }
@@ -78,53 +76,56 @@ window.addEventListener('load', function() {
         return content;
     }
 
-    const insertSender = function(senderMeta, sender) {
-        if (senderMeta && sender) {
+    const insertSender = function (senderAndDate, sender) {
+        if (senderAndDate && sender) {
             address = document.createElement('address');
             address.classList.add('sender');
-            senderMeta.appendChild(address);
             address.innerHTML = formatAddress(sender);
+            senderAndDate.appendChild(address);
         }
     }
 
-    const insertDate = function(senderMeta, date) {
-        if (senderMeta && date) {
+    const insertDate = function (senderAndDate, date) {
+        if (senderAndDate && date) {
             time = document.createElement('time');
-            senderMeta.appendChild(time);
             time.innerHTML = date;
+            senderAndDate.appendChild(time);
         }
     }
 
-    const insertSenderMeta = function() {
-        let sender = extractDefinitionListContent('@sender');
-        let date = extractDefinitionListContent('@date');
+    const insertSenderAndDate = function (letterHead, sender, date) {
         if (sender || date) {
-            let senderMeta = document.createElement('div');
-            senderMeta.classList.add('sender-meta');
-            document.body.insertAdjacentElement('afterbegin', senderMeta);
-            insertSender(senderMeta, sender);
-            insertDate(senderMeta, date);
-            return senderMeta;
+            let senderAndDate = document.createElement('div');
+            senderAndDate.classList.add('sender-and-date');
+            letterHead.insertAdjacentElement('afterbegin', senderAndDate);
+            insertSender(senderAndDate, sender);
+            insertDate(senderAndDate, date);
         }
     }
 
-    const insertReceiver = function(senderMeta) {
-        let receiver = extractDefinitionListContent('@receiver');
-
+    const insertReceiver = function (letterHead, receiver) {
         if (receiver) {
             address = document.createElement('address');
             address.classList.add('receiver');
-            if (senderMeta) {
-                senderMeta.insertAdjacentElement('afterend', address);
-            } else {
-                document.body.insertAdjacentElement('afterbegin', address);
-            }
             address.innerHTML = formatAddress(receiver);
+            letterHead.insertAdjacentElement('beforeend', address);
         }
     }
 
-    document.body.addEventListener('ia-writer-change', function() {
-        let senderMeta = insertSenderMeta();
-        insertReceiver(senderMeta);
+    const insertLetterHead = function () {
+        let sender = extractDefinitionListContent(FROM_KEYS);
+        let date = extractDefinitionListContent(DATE_KEYS);
+        let receiver = extractDefinitionListContent(TO_KEYS);
+        if (sender || date || receiver) {
+            letterHead = document.createElement('header');
+            letterHead.classList.add('letter-head');
+            document.body.insertAdjacentElement('afterbegin', letterHead);
+            insertSenderAndDate(letterHead, sender, date);
+            insertReceiver(letterHead, receiver);
+        }
+    }
+
+    document.body.addEventListener('ia-writer-change', function () {
+        insertLetterHead();
     })
 })
