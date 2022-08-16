@@ -31,6 +31,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    color: var(--text-color);
+}
+
 @media print {
     body {
         margin: 0 3cm;
