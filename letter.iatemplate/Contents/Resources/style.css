@@ -12,9 +12,52 @@
     --ol-counter-type: decimal;
     --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0";
     --text-color: black;
-    --text-background: white;
     --mark-background: yellow;
 }
+
+
+.letter-head {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1cm;
+}
+
+.letter-head a {
+    text-decoration: none;
+}
+
+.sender-and-date {
+    justify-self: end;
+    margin-left: 2.5cm;
+    max-width: 6cm;
+}
+
+.sender-and-date * {
+    display: block;
+}
+
+.sender-and-date *+time {
+    margin-top: var(--vertical-rhythm);
+}
+
+address.receiver {
+    justify-self: start;
+    margin: 2.5cm auto 2.5cm 0;
+    max-width: 7.5cm;
+}
+
+@media screen and (max-width: 600px) {
+    .letter-head {
+        flex-direction: column;
+    }
+
+    .sender-and-date {
+        justify-self: start;
+        margin-left: 0;
+        max-width: unset;
+    }
+}
+
 
 * {
     font-family: 'iA Writer Quattro', sans-serif;
@@ -41,6 +84,7 @@ a {
         font-size: 10pt;
         font-weight: 400;
     }
+
     *,
     *:before,
     *:after {
@@ -99,6 +143,10 @@ img+img {
 
 blockquote {
     font-style: italic;
+}
+
+address {
+    font-style: normal;
 }
 
 figcaption,
@@ -161,38 +209,6 @@ code {
     font-size: smaller;
 }
 
-.sender-meta {
-    float: right;
-    margin-left: 2.5cm;
-    max-width: 6cm;
-}
-
-@media screen and (max-width: 600px) {
-    .sender-meta {
-        float: none;
-        margin-left: 0;
-        max-width: unset;
-    }
-}
-
-.sender-meta * {
-    display: block;
-}
-
-.sender-meta *+* {
-    margin-top: var(--vertical-rhythm);
-}
-
-address {
-    font-style: normal;
-}
-
-address.receiver {
-    display: inline-block;
-    margin-top: 2.5cm;
-    margin-bottom: 2.5cm;
-    max-width: 7.5cm;
-}
 
 dl {
     margin-top: var(--vertical-rhythm);

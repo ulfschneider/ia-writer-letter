@@ -27,7 +27,7 @@ The *Letter* template will render the text with the *iA Writer Quattro* typeface
 
 ## The editor
 
-Indicate the sender, receiver, and date of writing with the following syntax in the iA Writer editor. Please mind the *empty lines before and after each data entry.*
+Indicate the sender, recipient, and date of writing with the following syntax in the iA Writer editor. Please mind the *empty lines before and after each data entry.*
 
 ~~~markdown
 @sender
@@ -43,6 +43,9 @@ Indicate the sender, receiver, and date of writing with the following syntax in 
 @date
 :April 15, 2021
 ~~~
+
+- Instead of the `@sender` keyword, `@from` can be used as well.
+- Instead of the `@receiver` keyword, `@recipient` and `@to` can be used alternatively.
 
 
 ## Use
