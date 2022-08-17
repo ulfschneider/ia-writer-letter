@@ -12,7 +12,14 @@
     --ol-counter-type: decimal;
     --ol-counter: counters(ol-counter, var(--ol-counter-delimiter), var(--ol-counter-type)) "\0000a0";
     --text-color: black;
+    --border-color: black;
+    --background: transparent;
+
     --mark-background: yellow;
+
+    color: var(--text-color);
+    border-color: var(--border-color);
+    background: var(--background);
 }
 
 
@@ -435,18 +442,15 @@ ol li.task-list-item {
 
 
 /* night mode */
-
-.night-mode * {
-    color: #dedede;
-    border-color: #dedede;
+.night-mode {
+    --text-color: #dedede;
+    --border-color: #dedede;
+    --background: #101010;
 }
+
 
 .night-mode pre,
 .night-mode code {
     background: #444;
 }
 
-.night-mode {
-    color: #dedede;
-    background: #101010;
-}
