@@ -182,6 +182,11 @@ figure>*+figcaption {
     margin-bottom: 0;
 }
 
+q {
+    quotes: "„""“""‚""‘";
+    font-style: italic;
+}
+
 hr {
     border: 0;
     text-align: center;
