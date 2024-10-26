@@ -8,14 +8,9 @@
   --space-d1: calc(var(--vertical-rhythm) * 0.5);
   --space-d2: calc(var(--space-d1) * 0.5);
   --list-item-type: "–";
-  --ol-counter-delimiter: ".";
+
   --ol-counter-type: decimal;
-  --ol-counter: counters(
-      ol-counter,
-      var(--ol-counter-delimiter),
-      var(--ol-counter-type)
-    )
-    "\0000a0";
+  --ol-counter: counters(ol-counter, ".", var(--ol-counter-type)) ".\0000a0";
   --text-color: black;
   --border-color: black;
   --background: transparent;
@@ -282,7 +277,6 @@ ol li::before {
   text-align: left;
   display: inline-block;
   font-family: var(--meta-font-family);
-  font-weight: bold;
 }
 
 ul li::before {
